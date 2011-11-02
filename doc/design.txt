@@ -1,0 +1,4 @@
+Qaccessorsgen is composed by two parts, a library and a cli interface.
+
+The library can be reused in an IDE, for example to generate accessors, for that reason
+the library and the ui talk to each others using a protocol.
