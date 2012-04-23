@@ -8,9 +8,8 @@ QT       += core
 
 QT       -= gui
 
-#LIBS += -L../qaccessorsgenlib/libqaccessorgenlib
+
 unix:LIBS += -lqaccessorsgenlib
-#unix:LIBS += -l /home/lbell/devel/qaccessorsgen/build/qaccessorsgenlib/qaccessorgenlib
 unix:LIBS += -L../qaccessorsgenlib
 win32:LIBS += libqaccessorgenlib.lib
 

@@ -1,7 +1,43 @@
 
 qaccessorsgen
 -------------
-todo
+qaccessorsgen is a small code generator to create accessors (getters and setters ) for c++ that knows about some qt conventions.
+The code can be copied into your favorite IDE.
+It is based on a library that can be embedded on other programs.
+
+usage
+-----
+qaccessorsgen className, type, name
+
+sample input:
+--------------
+> qaccessorsgen TestClass QString name
+
+sample output:
+--------------
+DECLARATIONS:
+QString _name;
+
+Q_PROPERTY(QString name READ name WRITE setName)
+
+QString name();
+
+void setName(const QString& value);
+
+----------------------------
+IMPLEMENTATION:
+QString TestClass::name()
+{
+        return _name ;
+}
+
+
+void TestClass::setName(const QString& value)
+{
+        _name = value ;
+}
+
+----------------------------
 
 
 Requirements
