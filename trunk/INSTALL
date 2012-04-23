@@ -1,12 +1,13 @@
 qaccessorsgen installation
 ===================
-todo
+run qmake in the main folder, then make
+
 
 Requirements
 ============
-
+Qt 4.7
 
 
 Quick Guide
 ===========
-
+see README file in this folder
