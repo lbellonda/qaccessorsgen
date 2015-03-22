@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Qaccessorsgen : Qt accessors (getters and setters) generator">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Qaccessorsgen</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/lbellonda/qaccessorsgen">View on GitHub</a>
+
+          <h1 id="project_title">Qaccessorsgen</h1>
+          <h2 id="project_tagline">Qt accessors (getters and setters) generator</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/lbellonda/qaccessorsgen/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/lbellonda/qaccessorsgen/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>This project aims to generate getter and setter methods for a property of a C++ class (accessors) in a way that fits well with the Qt property system, reducing the boilerplate code written in a typical project.</p>
+
+<h2>
+<a id="sample-input" class="anchor" href="#sample-input" aria-hidden="true"><span class="octicon octicon-link"></span></a>sample input:</h2>
+
+<blockquote>
+<p>qaccessorsgen TestClass QString name</p>
+</blockquote>
+
+<h2>
+<a id="sample-output" class="anchor" href="#sample-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>sample output:</h2>
+
+<p>DECLARATIONS:</p>
+
+<p>QString _name;</p>
+
+<p>Q_PROPERTY(QString name READ name WRITE setName)</p>
+
+<p>QString name();</p>
+
+<p>void setName(const QString&amp; value);</p>
+
+<hr>
+
+<p>IMPLEMENTATION:</p>
+
+<p>QString TestClass::name()
+{
+        return _name ;
+}</p>
+
+<p>void TestClass::setName(const QString&amp; value)
+{
+        _name = value ;
+}</p>
+
+<hr>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Qaccessorsgen maintained by <a href="https://github.com/lbellonda">lbellonda</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
